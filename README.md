@@ -47,9 +47,15 @@ This allows an attacker to bypass authentication and gain unauthorized access to
 
 ---
 
-### Insecure File Access (Developer File Viewer)
+### Insecure File Access (Directory Traversal)
 
 The developer file viewer allows users to request files directly from the server without proper path validation. This can allow attackers to access sensitive files on the system.
+
+Example attack:
+
+```
+view.php?file=../../etc/passwd
+```
 
 ---
 
@@ -66,15 +72,54 @@ Each vulnerability includes **before and after code examples** showing how the i
 
 ---
 
+## Vulnerability Mapping
+
+| Vulnerability              | Vulnerable File           | Secure Version              |
+| -------------------------- | ------------------------- | --------------------------- |
+| Cross-Site Scripting (XSS) | vulnerable-code/index.php | fixed-code/index_secure.php |
+| SQL Injection              | vulnerable-code/login.php | fixed-code/login_secure.php |
+| Directory Traversal        | vulnerable-code/view.php  | fixed-code/view_secure.php  |
+
+---
+
+## Skills Demonstrated
+
+* Web application vulnerability analysis
+* Cross-Site Scripting (XSS) exploitation and mitigation
+* SQL Injection exploitation and mitigation
+* Directory traversal vulnerability analysis
+* Secure PHP development practices
+* Input validation and output sanitization
+* Secure database queries using prepared statements
+
+---
+
+## Demonstration Video
+
+A walkthrough of the vulnerable application, exploitation of each vulnerability, and the implemented security fixes.
+
+*(Video link will be added here)*
+
+---
+
 ## Repository Structure
 
 ```
-candy-store-vulnerable-webapp
+candy-shop-security-project
 │
-├── README.md
 ├── vulnerable-code
+│   ├── index.php
+│   ├── login.php
+│   └── view.php
+│
 ├── fixed-code
-└── screenshots
+│   ├── index_secure.php
+│   ├── login_secure.php
+│   └── view_secure.php
+│
+├── screenshots
+│
+└── README.md
 ```
 
 ---
