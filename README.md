@@ -98,7 +98,7 @@ Each vulnerability includes **before and after code examples** showing how the i
 
 A walkthrough of the vulnerable application, exploitation of each vulnerability, and the implemented security fixes.
 
-*(Video link will be added here)*
+https://youtu.be/7iFv4GMW7yg
 
 ---
 
